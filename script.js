@@ -6,7 +6,7 @@ const yesButton = document.querySelector(".btn--yes");
 const noButton = document.querySelector(".btn--no");
 const catImg = document.querySelector(".cat-img");
 
-const MAX_IMAGES = 10;
+const MAX_IMAGES = 9; // Updated to 9 images
 
 let play = true;
 let noCount = 0;
@@ -42,16 +42,15 @@ function resizeYesButton() {
 
 function generateMessage(noCount) {
   const messages = [
-    "No",
-    "Baby khit. dee dee la wa",
-    "aw ;-;",
-    "pls i khr hrng",
-    "thar i liang baby Starbucks day",
-    "how about flowers",
-    "chocolate too?",
-    "how about a date?",
-    "How about all of the above",
-    "phr lw br haiy click 'No' trng click yes theau ni",
+    "No", // 1
+    "Baby khit. dee dee la wa", // 2
+    "aw ;-;", // 3
+    "pls i khr hrng", // 4
+    "thar i liang baby Starbucks day", // 5
+    "how about flowers", // 6
+    "chocolate too?", // 7
+    "how about a date?", // 8
+    "How about all of the above", // 9
   ];
 
   const messageIndex = Math.min(noCount, messages.length - 1);
@@ -60,10 +59,6 @@ function generateMessage(noCount) {
 
 function changeImage(image) {
   catImg.src = `cat-${image}.jpg`; // Corrected path
-}
-
-function updateNoButtonText() {
-  noButton.innerHTML = generateMessage(noCount);
 }
 
 function updateNoButtonText() {
